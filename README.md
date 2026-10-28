@@ -16,7 +16,11 @@ npm run build
 npm run preview
 ```
 
-Client-side routes are configured to fall back to `index.html` on Vercel (`vercel.json`).
+## Deploy on Vercel
+
+Import this repository and deploy a branch that contains the website files (including `package.json`, `src/`, and `vercel.json`). The repository root is the project root. `vercel.json` explicitly selects the Vite framework, runs `npm run build`, serves the `dist` directory, and sends client-side routes back to `index.html`.
+
+If a deployment returns Vercel's `404: NOT_FOUND`, check **Deployments** to make sure its Git branch and commit contain the website. In **Settings → Git**, confirm the production branch points to that branch; then redeploy the latest commit. The original `main` branch may contain only the initial README until the website branch is merged.
 
 ## Demo boundaries
 
